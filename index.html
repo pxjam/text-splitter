@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Text Splitter Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      font-size: 16px;
+      line-height: 1.3;
+      padding: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 4em;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border: 2px solid #ccc;
+      resize: vertical;
+    }
+
+    pre {
+      margin: 0.5em 0;
+      white-space: pre-wrap;
+    }
+
+    .W {
+      display: inline-block;
+      transition: 0.8s ease-out;
+      transition-property: opacity, transform;
+      opacity: 0;
+    }
+
+    .animate .W {
+      opacity: 1;
+      transform: translateX(0) !important;
+    }
+
+    .L {
+      display: inline-block;
+      transition: 0.8s ease-out;
+      transition-property: opacity, transform;
+      opacity: 0;
+    }
+
+    .animate .L {
+      opacity: 1;
+      transform: translateX(0) !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text-splitter demo</h1>
+
+  <label>
+    <strong>Input text or HTML to split:</strong><br>
+    <textarea data-text-splitter></textarea>
+  </label>
+
+  <h2>Split by words:</h2>
+  <p data-words-html></p>
+
+  <h3>Output code:</h3>
+  <pre data-words-text></pre>
+
+  <h2>Split by letters:</h2>
+  <p data-letters-html></p>
+
+  <h3>Split by letters (code):</h3>
+  <pre data-letters-text></pre>
+  <br>
+
+  <script type="module">
+    import { textSplitter } from './src/textSplitter.js'
+
+    const inputEl = document.querySelector('[data-text-splitter]')
+    inputEl.value = 'The <b>text-splitter</b> is&nbsp;here!'
+    inputEl.addEventListener('input', update)
+
+    function update() {
+      document.body.classList.remove('animate')
+      const inputString = inputEl.value
+
+      const words = textSplitter({
+        text: inputString,
+        wordCls: 'W',
+        getWordStyle: (idx) => `transform: translateX(${idx * 10}px)`
+      })
+
+      document.querySelector('[data-words-text]').innerText = words
+      document.querySelector('[data-words-html]').innerHTML = words
+
+      const letters = textSplitter({
+        text: inputString,
+        wordCls: 'W',
+        letterCls: 'L',
+        getLetterStyle: (idx) => `transform: translateX(${idx * 10}px)`
+      })
+
+      document.querySelector('[data-letters-text]').innerText = letters
+      document.querySelector('[data-letters-html]').innerHTML = letters
+
+      setTimeout(() => document.body.classList.add('animate'), 50)
+    }
+
+    update()
+  </script>
+</body>
+</html>

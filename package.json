@@ -1,0 +1,11 @@
+{
+  "name": "text-splitter",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "browser-sync start --server -f 'index.html' 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3"
+  }
+}
