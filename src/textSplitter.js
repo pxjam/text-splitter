@@ -1,8 +1,4 @@
-function wrapString(string, { cls, getStyle, idx }) {
-  const classAttr = cls ? ` class="${cls}"` : ''
-  const styleAttr = getStyle ? ` style="${getStyle(idx)}"` : ''
-  return `<span${classAttr}${styleAttr}>${string}</span>`
-}
+import { wrapString } from './wrapString.js'
 
 export function textSplitter(text, { wordCls, letterCls, getWordStyle, getLetterStyle }) {
   const splitLetters = Boolean(letterCls || getLetterStyle)

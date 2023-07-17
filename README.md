@@ -2,16 +2,21 @@
 
 ## Basic usage
 
+```shell
+npm install text-splitter
+```
+
 ```html
 <p id="p">This is a <strong>HTML text</strong> that will be split into separate lines, words, and&nbsp;letters.</p>
 ```
 
 ```js
-import { TextSplitter } from './src/text-splitter.js'
+import { TextSplitter } from 'text-splitter'
 
 const el = document.getElementById('p')
 
-const letters = textSplitter(el.innerHTML, {
+const letters = textSplitter({
+  text: el.innerHTML,
   wordCls: 'W',
   letterCls: 'L',
   getWordStyle: (idx) => `transform: translateY(${idx * 5}px)`,

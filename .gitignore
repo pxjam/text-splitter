@@ -1,8 +1,8 @@
+.DS_Store
+.idea
+.prettierrc
+.vscode
+Thumbs.db
+dist
 node_modules
 tmp
-.prettierrc
-.idea
-.vscode
-dist
-.DS_Store
-Thumbs.db

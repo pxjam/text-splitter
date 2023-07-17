@@ -1,10 +1,30 @@
 {
   "name": "text-splitter",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "author": "Dmitry Udovichenko <d.udovichenko@gmail.com> (https://pixeljam.studio)",
+  "description": "Helper for splitting and wrapping each word/letter of text/html with a span tag",
+  "keywords": [
+    "text",
+    "parser",
+    "html",
+    "ssr",
+    "css",
+    "dom"
+  ],
+  "license": "MIT",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "browser-sync start --server -f 'index.html' 'src/**/*.js'"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pxjam/text-splitter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pxjam/text-splitter/issues"
+  },
+  "homepage": "https://github.com/pxjam/text-splitter#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3"
   }
