@@ -3,7 +3,7 @@
 ## Basic usage
 
 ```shell
-npm install text-splitter
+npm install @pxjam/text-splitter
 ```
 
 ```html
@@ -11,7 +11,7 @@ npm install text-splitter
 ```
 
 ```js
-import { TextSplitter } from 'text-splitter'
+import { TextSplitter } from '@pxjam/text-splitter'
 
 const el = document.getElementById('p')
 

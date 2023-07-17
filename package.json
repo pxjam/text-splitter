@@ -1,6 +1,6 @@
 {
-  "name": "text-splitter",
-  "version": "0.1.1",
+  "name": "@pxjam/text-splitter",
+  "version": "0.1.2",
   "author": "Dmitry Udovichenko <d.udovichenko@gmail.com> (https://pixeljam.studio)",
   "description": "Helper for splitting and wrapping each word/letter of text/html with a span tag",
   "keywords": [
