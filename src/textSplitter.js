@@ -4,7 +4,7 @@ function wrapString(string, { cls, getStyle, idx }) {
   return `<span${classAttr}${styleAttr}>${string}</span>`
 }
 
-export function textSplitter({ text, wordCls, letterCls, getWordStyle, getLetterStyle }) {
+export function textSplitter(text, { wordCls, letterCls, getWordStyle, getLetterStyle }) {
   const splitLetters = Boolean(letterCls || getLetterStyle)
   const regex = /<[^>]+>|[^<>\s-&]+|&\w+;|[-–—]|\s+/g
 

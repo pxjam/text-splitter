@@ -11,8 +11,7 @@ import { TextSplitter } from './src/text-splitter.js'
 
 const el = document.getElementById('p')
 
-const letters = textSplitter({
-  text: el.innerHTML,
+const letters = textSplitter(el.innerHTML, {
   wordCls: 'W',
   letterCls: 'L',
   getWordStyle: (idx) => `transform: translateY(${idx * 5}px)`,

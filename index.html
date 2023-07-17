@@ -82,8 +82,7 @@
       document.body.classList.remove('animate')
       const inputString = inputEl.value
 
-      const words = textSplitter({
-        text: inputString,
+      const words = textSplitter(inputString, {
         wordCls: 'W',
         getWordStyle: (idx) => `transform: translateX(${idx * 10}px)`
       })
@@ -91,8 +90,7 @@
       document.querySelector('[data-words-text]').innerText = words
       document.querySelector('[data-words-html]').innerHTML = words
 
-      const letters = textSplitter({
-        text: inputString,
+      const letters = textSplitter(inputString, {
         wordCls: 'W',
         letterCls: 'L',
         getLetterStyle: (idx) => `transform: translateX(${idx * 10}px)`
