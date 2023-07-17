@@ -25,3 +25,7 @@ const letters = textSplitter({
 
 el.innerHTML = letters
 ```
+
+## Demo
+
+https://pxjam.github.io/text-splitter/
