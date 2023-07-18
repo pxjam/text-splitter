@@ -1,6 +1,6 @@
 # Text Splitter
 
-A helper for splitting and wrapping each word/letter of text/html
+A **< 1Kb** helper for splitting and wrapping each word/letter of text/html
 with a span tag with custom class and computable styles.
 
 It does not use DOM API, so it can be used outside
