@@ -15,7 +15,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "browser-sync start --server -f 'index.html' 'src/**/*.js'"
+    "dev": "browser-sync start --server -f 'index.html' 'src/**/*.js'",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/pxjam/text-splitter#readme",
   "devDependencies": {
-    "browser-sync": "^2.29.3"
+    "browser-sync": "^2.29.3",
+    "vitest": "^1.1.3"
   }
 }
